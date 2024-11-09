@@ -88,9 +88,9 @@ io.on("connection", (socket) => {
 
 const port = process.env.PORT || 5000;
 const __dirname=path.resolve();
-app.use(express.static(path.join(__dirname,"../frontend/vite-project/dist")))
+app.use(express.static(path.join(__dirname,'frontend', 'vite-project', 'dist')))
 app.get("*",(req,res)=>{
-    res.sendFile(path.join(__dirname,"../frontend/vite-project/dist","index.html"))
+    res.sendFile(path.join(__dirname,'frontend', 'vite-project', 'dist','index.html'))
 })
 server.listen(port, () => {
   console.log(`Server listening on port ${port}`);
